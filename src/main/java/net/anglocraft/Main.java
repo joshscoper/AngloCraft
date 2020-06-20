@@ -1,6 +1,7 @@
 package net.anglocraft;
 
 import net.anglocraft.character.Interaction;
+import net.anglocraft.character.InventoryInteraction;
 import net.anglocraft.claim.WorldClaimManager;
 import net.anglocraft.commands.Name;
 import net.anglocraft.events.Join;
@@ -78,6 +79,7 @@ public class Main extends JavaPlugin {
       Bukkit.getServer().getPluginManager().registerEvents(new PlayerCount(), this);
       Bukkit.getServer().getPluginManager().registerEvents(new Interaction(), this);
       Bukkit.getServer().getPluginManager().registerEvents(new Join(), this);
+      Bukkit.getServer().getPluginManager().registerEvents(new InventoryInteraction(), this);
    }
 
    public void registerCommands() {

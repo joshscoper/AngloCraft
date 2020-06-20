@@ -24,6 +24,8 @@ public class InventoryInteraction implements Listener {
         PlayerData data = PlayerData.get(player.getUniqueId());
         if (inv.equals(guiInv)){
             if (!player.hasPermission("ac.created") || player.isOp()) {
+                event.setCancelled(true);
+                event.setCursor(null);
                 int slot = event.getSlot();
                 switch (slot) {
                     case 1:
