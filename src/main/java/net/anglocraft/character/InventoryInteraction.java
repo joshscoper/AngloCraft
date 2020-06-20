@@ -3,6 +3,7 @@ package net.anglocraft.character;
 import net.Indyuce.mmocore.api.player.PlayerData;
 import net.anglocraft.Lang;
 import net.anglocraft.Main;
+import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -34,7 +35,7 @@ public class InventoryInteraction implements Listener {
                             player.closeInventory();
                             player.setLevel(0);
                             player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1,1);
-                            //TODO set player's profess
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "mmocore admin class " + player.getName() + " SAXON");
                         }
                         break;
                     case 3:
@@ -46,7 +47,7 @@ public class InventoryInteraction implements Listener {
                             player.closeInventory();
                             player.setLevel(0);
                             player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1,1);
-                            //TODO set player's profess
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "mmocore admin class " + player.getName() + " DANE");
                         }
                         break;
                 }
