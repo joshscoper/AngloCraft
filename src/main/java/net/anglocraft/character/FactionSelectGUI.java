@@ -21,7 +21,7 @@ public class FactionSelectGUI {
    }
 
    Inventory factionSelect() {
-      Inventory inv = Bukkit.createInventory((InventoryHolder)null, InventoryType.HOPPER, ChatColor.translateAlternateColorCodes('&', "&2&lChoose your faction..."));
+      Inventory inv = Bukkit.createInventory((InventoryHolder)null, InventoryType.HOPPER, ChatColor.translateAlternateColorCodes('&', main.config().getString("Settings.GUI_Titles.Faction_Select")));
       inv.setItem(1, this.saxon());
       inv.setItem(3, this.dane());
       return inv;

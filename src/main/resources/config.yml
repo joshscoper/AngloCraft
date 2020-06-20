@@ -9,3 +9,5 @@ Settings:
       Dane_Item: "iron_axe"
       Saxon_Item_Name: "&e&lSaxons"
       Dane_Item_Name: "&e&lDanes"
+   GUI_Titles:
+      Faction_Select: "&2&lChoose your faction..."

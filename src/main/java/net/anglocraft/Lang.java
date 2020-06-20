@@ -13,8 +13,9 @@ public enum Lang {
    JOIN("join-message", "&7[&a+&7] &f%player%"),
    CHOOSE_CLASS("choose-class", "&cYou must choose a class!"),
    QUIT("quit-message", "&7[&c-&7] &f%player%"),
-   DANE_JOIN("dane-join", "&eYou have joiend the &6&lDanes&e!"),
-   SAXON_JOIN("saxon-join", "&eYou have joined the &6&lSaxons&e!");
+   DANE_JOIN("dane-join", "&eYou have joined the &6&lDanes&e,"),
+   SAXON_JOIN("saxon-join", "&eYou have joined the &6&lSaxons&e,"),
+   SKIN_SELECT("skin-select", "&eTalk to the %guide% &eto continue.");
 
    private String path;
    private String def;
