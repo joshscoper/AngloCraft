@@ -1,4 +1,4 @@
-package anglocraft.net;
+package net.anglocraft;
 
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.YamlConfiguration;

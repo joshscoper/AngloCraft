@@ -1,6 +1,6 @@
-package anglocraft.net.CharacterCreation;
+package net.anglocraft.character;
 
-import anglocraft.net.Main;
+import net.anglocraft.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

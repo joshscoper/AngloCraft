@@ -1,14 +1,15 @@
-package anglocraft.net.PlayerManager;
+package net.anglocraft.player;
 
-import anglocraft.net.Main;
+import net.anglocraft.Main;
 import java.io.File;
 import java.io.IOException;
+
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
 public class PlayerManager {
-   private final Main main = (Main)Main.getPlugin(Main.class);
+   private final Main   main = (Main)Main.getPlugin(Main.class);
    private final Player player;
    private File playerFile;
    private FileConfiguration playerData;

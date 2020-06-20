@@ -1,6 +1,6 @@
-package anglocraft.net.CharacterCreation;
+package net.anglocraft.character;
 
-import anglocraft.net.Main;
+import net.anglocraft.Main;
 import java.util.Iterator;
 import net.Indyuce.mmocore.api.player.PlayerData;
 import org.bukkit.Bukkit;

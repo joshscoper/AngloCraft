@@ -1,10 +1,10 @@
-package anglocraft.net;
+package net.anglocraft;
 
-import anglocraft.net.CharacterCreation.Interaction;
-import anglocraft.net.Commands.Name;
-import anglocraft.net.Events.Join;
-import anglocraft.net.ServerList.MOTD;
-import anglocraft.net.ServerList.PlayerCount;
+import net.anglocraft.character.Interaction;
+import net.anglocraft.commands.Name;
+import net.anglocraft.events.Join;
+import net.anglocraft.serverlist.MOTD;
+import net.anglocraft.serverlist.PlayerCount;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;

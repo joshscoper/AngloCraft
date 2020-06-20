@@ -1,8 +1,8 @@
-package anglocraft.net.Events;
+package net.anglocraft.events;
 
-import anglocraft.net.Lang;
-import anglocraft.net.Main;
-import anglocraft.net.PlayerManager.PlayerManager;
+import net.anglocraft.Lang;
+import net.anglocraft.Main;
+import net.anglocraft.player.PlayerManager;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

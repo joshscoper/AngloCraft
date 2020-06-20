@@ -1,9 +1,10 @@
-package anglocraft.net.Commands;
+package net.anglocraft.commands;
 
-import anglocraft.net.Lang;
-import anglocraft.net.Main;
-import anglocraft.net.PlayerManager.PlayerManager;
+import net.anglocraft.Lang;
+import net.anglocraft.Main;
+import net.anglocraft.player.PlayerManager;
 import java.util.logging.Logger;
+
 import net.wesjd.anvilgui.AnvilGUI;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

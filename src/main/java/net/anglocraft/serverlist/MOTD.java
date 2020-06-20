@@ -1,6 +1,6 @@
-package anglocraft.net.ServerList;
+package net.anglocraft.serverlist;
 
-import anglocraft.net.Main;
+import net.anglocraft.Main;
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
