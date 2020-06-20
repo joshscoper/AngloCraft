@@ -1,6 +1,7 @@
 package net.anglocraft;
 
 import net.anglocraft.character.Interaction;
+import net.anglocraft.claim.WorldClaimManager;
 import net.anglocraft.commands.Name;
 import net.anglocraft.events.Join;
 import net.anglocraft.serverlist.MOTD;
@@ -8,6 +9,8 @@ import net.anglocraft.serverlist.PlayerCount;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import net.milkbowl.vault.chat.Chat;
@@ -15,6 +18,7 @@ import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.economy.EconomyResponse;
 import net.milkbowl.vault.permission.Permission;
 import org.bukkit.Bukkit;
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -27,12 +31,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin {
    private File config;
    private FileConfiguration c;
+   // TODO 2020/06/20: AHHHH EVERYTHING IS STATIC
    public static YamlConfiguration langConfig;
    public static File langFile;
    private static final Logger log = Logger.getLogger("Minecraft");
    private static Economy econ = null;
    private static Permission perms = null;
    private static Chat chat = null;
+   private static Map<World, WorldClaimManager> claimManagerMap = new HashMap<>();
 
    public void onEnable() {
       this.loadLang();
@@ -59,6 +65,9 @@ public class Main extends JavaPlugin {
          this.setupPermissions();
          this.setupChat();
       }
+
+      for(World world : getServer().getWorlds())
+         claimManagerMap.put(world, new WorldClaimManager(world));
    }
 
    public void onDisable() {
