@@ -1,4 +1,4 @@
 # AngloCraft
 **Preface:**
 Ben deleted the original code...
-![This is Fine](https://media.giphy.com/media/wJPou1dis1l2OENxGZ/giphy.gif)
+![This is Fine](https://i.kym-cdn.com/photos/images/original/001/476/528/d03)
