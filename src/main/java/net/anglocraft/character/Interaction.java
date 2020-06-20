@@ -29,7 +29,8 @@ public class Interaction implements Listener {
       if (event.getHand().equals(EquipmentSlot.HAND)) {
          String name = ChatColor.translateAlternateColorCodes('&', this.main.getConfig().getString("Settings.Character_Creation.NPC_Name"));
          if (ent.getName().equals(name) && ent instanceof Villager) {
-            new FactionSelectGUI(player);
+            FactionSelectGUI gui = new FactionSelectGUI(player);
+            player.openInventory(gui.factionSelect());
             event.setCancelled(true);
          }
 

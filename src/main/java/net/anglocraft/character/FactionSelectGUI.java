@@ -18,7 +18,6 @@ public class FactionSelectGUI {
 
    public FactionSelectGUI(Player player) {
       this.player = player;
-      player.openInventory(this.factionSelect());
    }
 
    Inventory factionSelect() {
