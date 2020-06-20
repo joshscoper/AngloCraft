@@ -1,0 +1,11 @@
+name: AngloCraft
+version: 1.0.1
+main: anglocraft.net.Main
+api-version: 1.15
+prefix: AC
+authors: [joshscoper]
+description: The AngloCraft Core System
+commands:
+  name:
+    description: renaming feature
+    usage: /name [<player>]

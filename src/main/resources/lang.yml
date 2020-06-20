@@ -1,0 +1,13 @@
+#Color Codes are supported '&' (1-9/a-f)
+#Use %player% for a player's name
+#Prefixes
+admin-prefix: "&6&lADMIN &e>> &r"
+#Messages
+welcome-message: "&aWelcome &e%player% &ato &6&lAngloCraft!"
+join-message: "&7[&a+&7] &f%player%"
+quit-message: "&7[&c-&7] &f%player%"
+invalid-args: "&cInvalid arguments!"
+player-only: "&cSorry but that can only be run by a player!"
+must-be-number: "&cYou need to specify a number, not a word."
+no-permissions: "&cYou don''t have permission for that!"
+choose-class: "&cYou must choose a class!"
