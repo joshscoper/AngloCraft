@@ -1,0 +1,11 @@
+Settings:
+   MOTD: "&c&lThis is the default MOTD!" #Sets the server list MOTD - '&' supported
+   MaxPlayers: 9999 #Sets the default max players for when no players are online
+   Character_Creation: 
+      NPC_Name: "&5&lCharacter Creator" #Sets the required name of the character creation NPC (Only if Citizens is enabled)
+      Saxon_NPC: "&6&lPriest"
+      Dane_NPC: "&6&lSeer"
+      Saxon_Item: "iron_sword"
+      Dane_Item: "iron_axe"
+      Saxon_Item_Name: "&e&lSaxons"
+      Dane_Item_Name: "&e&lDanes"
