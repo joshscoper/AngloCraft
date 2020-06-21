@@ -1,6 +1,7 @@
 Settings:
-   MOTD: "&c&lThis is the default MOTD!" #Sets the server list MOTD - '&' supported
+   MOTD: "&6&n=->&eAngloCraft&6&n<-=" #Sets the server list MOTD - '&' supported
    MaxPlayers: 9999 #Sets the default max players for when no players are online
+   Scramble_Chat: true #Enables/Disables the scrambling of chat
    Character_Creation: 
       NPC_Name: "&5&lCharacter Creator" #Sets the required name of the character creation NPC (Only if Citizens is enabled)
       Saxon_NPC: "&6&lPriest"

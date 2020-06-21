@@ -70,7 +70,6 @@ public class Main extends JavaPlugin {
       for(World world : getServer().getWorlds())
          claimManagerMap.put(world, new WorldClaimManager(world));
    }
-
    public void onDisable() {
    }
 
@@ -80,6 +79,7 @@ public class Main extends JavaPlugin {
       Bukkit.getServer().getPluginManager().registerEvents(new Interaction(), this);
       Bukkit.getServer().getPluginManager().registerEvents(new Join(), this);
       Bukkit.getServer().getPluginManager().registerEvents(new InventoryInteraction(), this);
+      Bukkit.getServer().getPluginManager().registerEvents(new net.anglocraft.events.Chat(), this);
    }
 
    public void registerCommands() {
