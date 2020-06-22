@@ -2,6 +2,7 @@
 #Use %player% for a player's name
 #Prefixes
 admin-prefix: "&6&lADMIN &e>> &r"
+debug-prefix: "&e&lDEBUG &f>>"
 #Messages
 welcome-message: "&aWelcome &e%player% &ato &6&lAngloCraft!"
 join-message: "&7[&a+&7] &f%player%"
@@ -14,3 +15,4 @@ choose-class: "&cYou must choose a class!"
 dane-join: "&eYou have joined the &6&lDanes&e,"
 saxon-join: "&eYou have joined the &6&lSaxons&e,"
 skin-select: "&eTalk to the %guide% to continue."
+skin-select-loading: "&eSkin selector loading please be patient..."

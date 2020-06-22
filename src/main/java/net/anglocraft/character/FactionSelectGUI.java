@@ -13,11 +13,9 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class FactionSelectGUI {
-   Player player;
    private Main main = (Main)Main.getPlugin(Main.class);
 
-   public FactionSelectGUI(Player player) {
-      this.player = player;
+   public FactionSelectGUI() {
    }
 
    Inventory factionSelect() {

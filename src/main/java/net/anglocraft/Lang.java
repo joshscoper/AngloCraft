@@ -5,6 +5,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 
 public enum Lang {
    PREFIX("admin-prefix", "&6&lAngloCraft &e>>"),
+   DEBUG("debug-prefix", "&e&lDEBUG &f>>"),
    WELCOME_MESSAGE("welcome-message", "&aWelcome &e%player% &ato &6&lAngloCraft!"),
    INVALID_ARGS("invalid-args", "&cInvalid arguments!"),
    PLAYER_ONLY("player-only", "&cSorry but that can only be run by a player!"),
@@ -15,6 +16,7 @@ public enum Lang {
    QUIT("quit-message", "&7[&c-&7] &f%player%"),
    DANE_JOIN("dane-join", "&eYou have joined the &6&lDanes&e,"),
    SAXON_JOIN("saxon-join", "&eYou have joined the &6&lSaxons&e,"),
+   SKIN_SELECT_LOADING("skin-select-loading","&eSkin selector loading please be patient..."),
    SKIN_SELECT("skin-select", "&eTalk to the %guide% &eto continue.");
 
    private String path;

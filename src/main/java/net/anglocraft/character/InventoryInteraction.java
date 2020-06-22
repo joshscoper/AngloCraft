@@ -14,13 +14,13 @@ import org.bukkit.inventory.Inventory;
 
 public class InventoryInteraction implements Listener {
 
-    private Main main = Main.getPlugin(Main.class);
+    private final Main main = Main.getPlugin(Main.class);
 
     @EventHandler
     public void charCreate(InventoryClickEvent event) {
         Inventory inv = event.getInventory();
         Player player = (Player) event.getWhoClicked();
-        FactionSelectGUI gui = new FactionSelectGUI(player);
+        FactionSelectGUI gui = new FactionSelectGUI();
         Inventory guiInv = gui.factionSelect();
         PlayerData data = PlayerData.get(player.getUniqueId());
         String contmsg = Lang.SKIN_SELECT.toString();
