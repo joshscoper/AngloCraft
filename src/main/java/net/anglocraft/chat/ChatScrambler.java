@@ -44,6 +44,10 @@ public class ChatScrambler {
                 r.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c&l" + player.getCustomName() + "&7: &f&k" + message));
                 break;
             }
+        } else {
+            for (Player r: recipients){
+                r.sendMessage(ChatColor.translateAlternateColorCodes('&', "&d&l" + player.getCustomName() + "&7: " + message));
+            }
         }
     }
 
