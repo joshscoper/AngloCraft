@@ -37,6 +37,8 @@ public class PlayerManager {
             playerConfig.createSection("Village");
             playerConfig.createSection("Name");
             playerConfig.createSection("RPName");
+            playerConfig.set("Faction", "None");
+            playerConfig.set("Village", "None");
             playerConfig.set("Name", player.getName());
             playerConfig.save(playerData);
          } catch (IOException e) {
