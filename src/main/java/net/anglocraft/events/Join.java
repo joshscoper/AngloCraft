@@ -19,8 +19,8 @@ public class Join implements Listener {
       join = join.replaceAll("%player%", player.getName());
       event.setJoinMessage(join);
       PlayerManager manager = new PlayerManager(player);
-      if (!player.hasPlayedBefore() || !manager.hasFile()) {
-         this.firstJoin(player);
+      if (!manager.hasFile()){
+         manager.createFile();
       }
 
    }
@@ -30,6 +30,6 @@ public class Join implements Listener {
       welcome = welcome.replaceAll("%player%", player.getName());
       player.sendMessage(welcome);
       PlayerManager manager = new PlayerManager(player);
-      manager.registerPlayer();
+      manager.createFile();
    }
 }

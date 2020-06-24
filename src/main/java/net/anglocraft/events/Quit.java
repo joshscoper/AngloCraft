@@ -16,7 +16,7 @@ public class Quit implements Listener {
    public void onQuit(PlayerQuitEvent event) {
       Player player = event.getPlayer();
       PlayerManager manager = new PlayerManager(player);
-      manager.savePlayerData();
+      manager.saveFile();
       String quit = ChatColor.translateAlternateColorCodes('&', Lang.QUIT.toString());
       quit = quit.replaceAll("%player%", player.getName());
       event.setQuitMessage(quit);

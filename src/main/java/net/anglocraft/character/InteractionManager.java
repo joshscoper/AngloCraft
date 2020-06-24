@@ -3,6 +3,7 @@ package net.anglocraft.character;
 import net.Indyuce.mmocore.api.player.PlayerData;
 import net.anglocraft.Lang;
 import net.anglocraft.Main;
+import net.anglocraft.player.PlayerManager;
 import net.wesjd.anvilgui.AnvilGUI;
 import org.bukkit.*;
 import org.bukkit.entity.Entity;
@@ -64,6 +65,8 @@ public class InteractionManager {
             player.setPlayerListName(text);
             player.setCustomName(text);
             player.setCustomNameVisible(true);
+            PlayerManager manager = new PlayerManager(player);
+            manager.setRPName(text);
             PlayerData playerData;
             playerData = PlayerData.get(p.getUniqueId());
             String faction = playerData.getProfess().getName().replaceAll("&e&l" , "");

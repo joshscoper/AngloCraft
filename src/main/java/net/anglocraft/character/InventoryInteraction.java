@@ -3,6 +3,7 @@ package net.anglocraft.character;
 import net.Indyuce.mmocore.api.player.PlayerData;
 import net.anglocraft.Lang;
 import net.anglocraft.Main;
+import net.anglocraft.player.PlayerManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Sound;
@@ -24,6 +25,7 @@ public class InventoryInteraction implements Listener {
         Inventory guiInv = gui.factionSelect();
         PlayerData data = PlayerData.get(player.getUniqueId());
         String contmsg = Lang.SKIN_SELECT.toString();
+        PlayerManager manager = new PlayerManager(player);
         if (inv.contains(gui.dane())){
             if (!player.hasPermission("ac.created") || player.isOp()) {
                 event.setCancelled(true);
@@ -35,6 +37,7 @@ public class InventoryInteraction implements Listener {
                         player.sendMessage(saxonmsg);
                         player.hasPermission("ac.created");
                         player.hasPermission("ac.saxons");
+                        manager.setFaction("Saxons");
                         player.closeInventory();
                         data.setLevel(1);
                         data.setExperience(0);
@@ -48,6 +51,7 @@ public class InventoryInteraction implements Listener {
                         player.sendMessage(danemsg);
                         player.hasPermission("ac.created");
                         player.hasPermission("ac.danes");
+                        manager.setFaction("Danes");
                         player.closeInventory();
                         data.setLevel(1);
                         data.setExperience(0);
