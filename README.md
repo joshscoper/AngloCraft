@@ -8,8 +8,14 @@ TODO
   - Village Specialization
   - Storage for Player Housing(Upgrading/Extra Inventory)
 - Add resource gathering
+  - Woodcutting
+  - Sod Gathering
+  - Farming
+  - Fishing
+  - Mining
 - Write instance based raids/events
 - Write random world events
 - Create jobs
 - Player titles
 - Automated whitelisting
+- Piety System
