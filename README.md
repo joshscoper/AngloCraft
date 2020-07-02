@@ -1,4 +1,15 @@
 # AngloCraft
-**Preface:**
-Ben deleted the original code...
-![This is Fine](https://i.kym-cdn.com/photos/images/original/001/476/528/d03)
+TODO
+- Finish village system
+  - Land Claiming
+  - NPC Creation
+  - Resource Requirements 
+  - Upgrade Ladders
+  - Village Specialization
+  - Storage for Player Housing(Upgrading/Extra Inventory)
+- Add resource gathering
+- Write instance based raids/events
+- Write random world events
+- Create jobs
+- Player titles
+- Automated whitelisting
