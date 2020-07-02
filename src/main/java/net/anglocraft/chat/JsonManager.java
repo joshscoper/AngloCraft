@@ -8,12 +8,39 @@ import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
+import javax.xml.soap.Text;
+
 public class JsonManager {
 
     Player player;
 
     public JsonManager(Player player) {
         this.player = player;
+    }
+
+    public BaseComponent name(){
+        String name = player.getDisplayName();
+        TextComponent n = new TextComponent(name);
+        n.setBold(true);
+        n.setColor(net.md_5.bungee.api.ChatColor.DARK_GRAY);
+        n.setItalic(true);
+        return n;
+    }
+
+    public BaseComponent staff(){
+        TextComponent staff = new TextComponent("STAFF ");
+        staff.setColor(net.md_5.bungee.api.ChatColor.DARK_RED);
+        staff.setBold(true);
+        staff.setItalic(true);
+        return staff;
+    }
+
+    public BaseComponent ooc(){
+        TextComponent ooc = new TextComponent("OOC ");
+        ooc.setColor(net.md_5.bungee.api.ChatColor.GOLD);
+        ooc.setBold(true);
+        ooc.setItalic(true);
+        return ooc;
     }
 
     public BaseComponent friendlyJsonName(){
