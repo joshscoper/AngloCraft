@@ -6,9 +6,9 @@ The current supported MineCraft versions are
 
 | Version | Supported          |
 |---------|--------------------|
-| 1.15.2  | :green_check_mark: |
-| 1.14.x  | :green_check_mark: |
-| 1.13.x  | :green_check_mark: |
+| 1.15.2  |   Stable           |
+| 1.14.x  |   Stable           |
+| 1.13.x  |   Not Tested       |
 |---------|--------------------|
 
 ## Reporting a Vulnerability or Bug
