@@ -1,4 +1,9 @@
-# AngloCraft
+# AngloCraft 
+
+Version: 1.0.1 
+
+Server Version: Paper 1.15.2
+
 TODO
 - Finish village system
   - Land Claiming
