@@ -2,18 +2,14 @@ package net.anglocraft.chat;
 
 import com.google.common.escape.CharEscaperBuilder;
 import net.Indyuce.mmocore.api.player.PlayerData;
+import net.anglocraft.Lang;
 import net.anglocraft.Main;
 import net.anglocraft.player.PlayerManager;
-import net.md_5.bungee.api.ChatMessageType;
-import net.md_5.bungee.api.chat.BaseComponent;
-import net.md_5.bungee.api.chat.ComponentBuilder;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Entity;
-import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 
-import javax.xml.soap.Text;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,13 +25,16 @@ public class ChatScrambler {
         this.player = player;
         this.recipients = recipients;
     }
+
     public void checkDistance(){
         recipients.clear();
         int radius = main.config().getInt("Settings.Chat_Distance");
         for (Entity entity : player.getNearbyEntities(radius,radius,radius)) {
-            if (entity.getType().equals(EntityType.PLAYER)){
+            if (entity instanceof Player){
                 Player r = (Player) entity;
                 recipients.add(r);
+                recipients.add(player);
+                r.sendMessage(Lang.DEBUG + "TEST");
             }
         }
     }
@@ -52,6 +51,7 @@ public class ChatScrambler {
         }
     }
 
+
     public void sendMessage(String message){
         JsonManager json = new JsonManager(player);
         PlayerManager manager = new PlayerManager(player);
@@ -60,25 +60,28 @@ public class ChatScrambler {
             //OOC
             for (Player r : recipients) {
                 message = message.replace(prefix, ' ');
-                TextComponent msg = new TextComponent(ChatColor.translateAlternateColorCodes('&', " &7: &e" + message));
+                TextComponent msg = new TextComponent(ChatColor.translateAlternateColorCodes('&', " &7:&e" + message));
                 r.spigot().sendMessage(json.ooc(), json.neutralJsonName(), msg );
             }
+            return;
         }
         if (prefix == '$' && player.hasPermission("ac.staff")){
             //Staff
             for (Player r : recipients){
                 if (r.hasPermission("ac.staff")){
                     message = message.replace(prefix, ' ');
-                    TextComponent msg = new TextComponent(ChatColor.translateAlternateColorCodes('&', " &7: &c" + message));
+                    TextComponent msg = new TextComponent(ChatColor.translateAlternateColorCodes('&', " &7:&c" + message));
                     r.spigot().sendMessage(json.staff(), json.neutralJsonName(), msg);
                 }
             }
+            return;
         }
+
         //Proximity Chat
         if (manager.hasRPName()) {
-            if (main.config().getBoolean("Settings.Proximity_Chat")) {
+            if (main.config().get("Settings.Proximity_Chat").equals("true")) {
                 checkDistance();
-                if (main.config().getBoolean("Settings.Scramble_Chat")) {
+                if (main.config().get("Settings.Scramble_Chat").equals("true")) {
                     checkFaction();
                     for (Player r : same) {
                         TextComponent msg = new TextComponent(ChatColor.translateAlternateColorCodes('&', " &7: &f" + message));
@@ -96,6 +99,11 @@ public class ChatScrambler {
                         TextComponent msg = new TextComponent(ChatColor.translateAlternateColorCodes('&', " &7: &f" + message));
                         r.spigot().sendMessage(json.neutralJsonName(), msg);
                     }
+                }
+            } else {
+                for (Player r: recipients){
+                    TextComponent msg = new TextComponent(ChatColor.translateAlternateColorCodes('&', " &7: &f" + message));
+                    r.spigot().sendMessage(json.neutralJsonName(), msg);
                 }
             }
         } else {
