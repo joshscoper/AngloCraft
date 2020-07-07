@@ -28,13 +28,12 @@ public class ChatScrambler {
 
     public void checkDistance(){
         recipients.clear();
+        recipients.add(player);
         int radius = main.config().getInt("Settings.Chat_Distance");
         for (Entity entity : player.getNearbyEntities(radius,radius,radius)) {
             if (entity instanceof Player){
                 Player r = (Player) entity;
                 recipients.add(r);
-                recipients.add(player);
-                r.sendMessage(Lang.DEBUG + "TEST");
             }
         }
     }

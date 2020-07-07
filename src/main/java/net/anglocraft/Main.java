@@ -3,8 +3,13 @@ package net.anglocraft;
 import net.anglocraft.character.Interaction;
 import net.anglocraft.character.InventoryInteraction;
 import net.anglocraft.claim.WorldClaimManager;
+import net.anglocraft.commands.Debug;
 import net.anglocraft.commands.Name;
+import net.anglocraft.customevents.JumpEvent;
+import net.anglocraft.events.ItemInteraction;
 import net.anglocraft.events.Join;
+import net.anglocraft.events.Jump;
+import net.anglocraft.events.Movement;
 import net.anglocraft.serverlist.MOTD;
 import net.anglocraft.serverlist.PlayerCount;
 import java.io.File;
@@ -49,13 +54,15 @@ public class Main extends JavaPlugin {
       } catch (InvalidConfigurationException | IOException var2) {
          var2.printStackTrace();
       }
-
+      this.registerCommands();
       this.registerEvents();
-
+      JumpEvent.register(this);
 
       for(World world : getServer().getWorlds())
          claimManagerMap.put(world, new WorldClaimManager(world));
    }
+
+
    public void onDisable() {
    }
 
@@ -66,9 +73,13 @@ public class Main extends JavaPlugin {
       Bukkit.getServer().getPluginManager().registerEvents(new Join(), this);
       Bukkit.getServer().getPluginManager().registerEvents(new InventoryInteraction(), this);
       Bukkit.getServer().getPluginManager().registerEvents(new net.anglocraft.events.Chat(), this);
+      Bukkit.getServer().getPluginManager().registerEvents(new Movement(), this);
+      Bukkit.getServer().getPluginManager().registerEvents(new ItemInteraction(), this);
+      Bukkit.getServer().getPluginManager().registerEvents(new Jump(), this);
    }
 
    public void registerCommands() {
+      this.getCommand("villageitem").setExecutor(new Debug());
       this.getCommand("name").setExecutor(new Name());
    }
 

@@ -6,6 +6,9 @@ prefix: AC
 authors: [joshscoper,benkinney]
 description: The AngloCraft Core System
 commands:
+  villageitem:
+    description: a test command
+    usage: /villageitem
   name:
     description: renaming feature
     usage: /name [<player>]

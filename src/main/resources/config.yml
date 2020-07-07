@@ -1,9 +1,16 @@
 Settings:
-   MOTD: "&6&n=->&eAngloCraft&6&n<-=" #Sets the server list MOTD - '&' supported
+   MOTD: "    &6&n=->&eAngloCraft&6&n<-=" #Sets the server list MOTD - '&' supported
    MaxPlayers: 9999 #Sets the default max players for when no players are online
    Scramble_Chat: "true" #Enables/Disables the scrambling of chat
    Chat_Distance: 30 #Sets the distance players can talk in
    Proximity_Chat: "true" #Enables/Disables proximity chat
+   Village:
+      Item: "beacon"
+   Swim:
+      Anti_Swim: "true" #Enables/Disables Anti-Swim
+   Jump:
+      Anti_Bhop: "true" #Enables/Disables Anti-Bhop
+      Cooldown: 5 #Anti-Bhop cooldown time (in seconds)
    Character_Creation: 
       NPC_Name: "&3&lGideon" #Sets the required name of the character creation NPC (Only if Citizens is enabled)
       Saxon_NPC: "&6&lPriest"
