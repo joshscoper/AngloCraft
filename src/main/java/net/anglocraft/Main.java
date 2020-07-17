@@ -6,7 +6,7 @@ import net.anglocraft.claim.WorldClaimManager;
 import net.anglocraft.commands.Debug;
 import net.anglocraft.commands.Name;
 import net.anglocraft.customevents.JumpEvent;
-import net.anglocraft.events.ItemInteraction;
+import net.anglocraft.events.VillageItemEvents;
 import net.anglocraft.events.Join;
 import net.anglocraft.events.Jump;
 import net.anglocraft.events.Movement;
@@ -21,13 +21,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.entity.Player;
-import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
@@ -74,7 +70,7 @@ public class Main extends JavaPlugin {
       Bukkit.getServer().getPluginManager().registerEvents(new InventoryInteraction(), this);
       Bukkit.getServer().getPluginManager().registerEvents(new net.anglocraft.events.Chat(), this);
       Bukkit.getServer().getPluginManager().registerEvents(new Movement(), this);
-      Bukkit.getServer().getPluginManager().registerEvents(new ItemInteraction(), this);
+      Bukkit.getServer().getPluginManager().registerEvents(new VillageItemEvents(), this);
       Bukkit.getServer().getPluginManager().registerEvents(new Jump(), this);
    }
 
